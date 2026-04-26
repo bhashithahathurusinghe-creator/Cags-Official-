@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceylon Academy of Gemmological Science</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --card:#0f172a;
+      --accent:#0ea5e9;
+      --accent-dark:#0284c7;
+      --text:#ffffff;
+      --muted:#cbd5e1;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      text-align:center;
+      line-height:1.6;
+    }
+
+    header{
+      padding:48px 18px;
+      background:linear-gradient(135deg,#081426,#0b2440,#0ea5e9);
+      position:relative;
+      overflow:hidden;
+    }
+
+    header::before,
+    header::after{
+      content:"💎";
+      position:absolute;
+      font-size:clamp(2.5rem,8vw,5rem);
+      opacity:0.12;
+      animation:gemFloat 7s ease-in-out infinite;
+    }
+
+    header::before{
+      left:8%;
+      top:18%;
+    }
+
+    header::after{
+      right:10%;
+      bottom:12%;
+      animation-delay:2s;
+    }
+
+    h1{
+      font-size:clamp(2rem,7vw,3.5rem);
+      margin-bottom:12px;
+      line-height:1.15;
+    }
+
+    h2{
+      font-size:clamp(1.5rem,5vw,2.2rem);
+      margin:20px 0 12px;
+    }
+
+    h3{
+      font-size:clamp(1.1rem,4vw,1.5rem);
+      margin:10px 0;
+    }
+
+    p{
+      font-size:clamp(0.95rem,3.5vw,1.1rem);
+      color:var(--muted);
+      max-width:700px;
+      margin:0 auto 14px;
+      padding:0 10px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+      margin-top:22px;
+    }
+
+    .buttons a{
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:30px;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-size:clamp(0.9rem,3vw,1rem);
+      transition:.3s;
+      min-width:130px;
+    }
+
+    .buttons a:hover{
+      transform:scale(1.05);
+      background:var(--accent-dark);
+    }
+
+    section{padding:24px 16px}
+
+    .courses{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+      padding:20px 0;
+    }
+
+    .card{
+      background:var(--card);
+      padding:22px 18px;
+      border-radius:20px;
+      box-shadow:0 0 20px rgba(14,165,233,.2);
+    }
+
+    .gem{
+      font-size:42px;
+      animation:float 2s infinite alternate;
+    }
+
+    @keyframes float{
+      from{transform:translateY(0) rotate(0deg)}
+      to{transform:translateY(-8px) rotate(8deg)}
+    }
+
+    @keyframes gemFloat{
+      0%{transform:translateY(0) rotate(0deg) scale(1)}
+      50%{transform:translateY(-18px) rotate(12deg) scale(1.08)}
+      100%{transform:translateY(0) rotate(-6deg) scale(1)}
+    }
+      to{transform:translateY(-8px)}
+    }
+
+    form{
+      max-width:520px;
+      margin:0 auto;
+      padding:4px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    input,textarea{;
+      padding:10px 12px;
+      margin:6px 0;
+      border:none;
+      border-radius:8px;
+      font-size:0.9rem;
+      background:#f8fafc;
+    }
+
+    textarea{
+      width:50%;
+      min-height:90px;
+      resize:vertical;
+    }
+
+    button{
+      padding:12px 24px;
+      border:none;
+      border-radius:24px;
+      background:var(--accent);
+      color:#fff;
+      font-size:0.95rem;
+      cursor:pointer;
+      width:auto;
+      min-width:180px;
+      margin-top:10px;
+    }
+
+    footer{
+      padding:14px;
+      background:#020617;
+      font-size:0.9rem;
+    }
+
+    @media (max-width:600px){
+      header{padding:36px 14px}
+      .buttons a{
+        width:100%;
+        max-width:260px;
+      }
+      .card{padding:18px 14px}
+      .gem{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ceylon Academy of Gemmological Science</h1>
+    <p>Professional gem education with digital NFC contact experience</p>
+    <div class="buttons">
+      <a href="tel:+94777572970">Call Now</a>
+      <a href="https://wa.me/94777572970">WhatsApp</a>
+      <a href="https://www.facebook.com/profile.php?id=61562886132654">Facebook</a>
+      <a href="https://www.youtube.com/@CAGS-Srilanka">YouTube</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Our Courses</h2>
+    <div class="courses">
+      <div class="card"><div class="gem">💎</div><h3>Professional Gem Identification</h3></div>
+      <div class="card"><div class="gem">💎</div><h3>Diamond Grading &amp; Valuation</h3></div>
+      <div class="card"><div class="gem">💎</div><h3>Colored Stone Analysis</h3></div>
+      <div class="card"><div class="gem">💎</div><h3>Jewelry Appraisal</h3></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lead Lecturer</h2>
+    <h3 style="color:#38bdf8">Umesh Wariyapperuma</h3>
+    <p>Recognized for professional gemmological teaching and practical gemstone analysis.</p>
+  </section>
+
+  <section>
+    <h2 style="margin-bottom:10px;">Contact Us</h2>
+    <p style="font-size:0.95rem;max-width:420px;">Send your course inquiry and we will respond through Gmail.</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfmXWrD0QQOsyIdM6VHHOgElb0KmyX55N60XZ3E1JxHM-LkYw/viewform?usp=header">
+      <button type="submit">Click me For Send Contact me</button>
+      <p style="font-size:0.8rem;opacity:0.8;">Replace the Google Form ID and entry numbers with your own form fields.</p>
+    </form>
+  </section>
+
+  <footer>
+    Site made by <strong>Creative Team</strong>
+  </footer>
+  
+</body>
+</html>
